@@ -60,7 +60,7 @@ async function fetchCarreras({
 export default async function CarrerasPage({
   searchParams,
 }: {
-  searchParams?: SearchParams;
+  searchParams: Promise<SearchParams>;
 }) {
   const params = await searchParams;
   // Parsear los parámetros de búsqueda
