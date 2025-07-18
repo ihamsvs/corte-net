@@ -9,7 +9,7 @@ import { FilterFormClient } from "../components/FilterFormClient"; // Importa el
 const ITEMS_PER_PAGE = 12;
 
 interface CarrerasPageProps {
-  searchParams?: Record<string, string | string[] | undefined>
+  searchParams?: { [key: string]: string | string[] | undefined }
 }
 
 function getParam(value: string | string[] | undefined): string {
