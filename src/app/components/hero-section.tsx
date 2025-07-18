@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
+
 export function HeroSection(){
     return(
         <div className="text-center mb-16">

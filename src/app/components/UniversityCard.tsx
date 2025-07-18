@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, Star, MapPin } from "lucide-react";
+import { GraduationCap,  MapPin } from "lucide-react";
 import { Careers } from "@/lib/careersTypes";
 
 interface UniversityCardProps {

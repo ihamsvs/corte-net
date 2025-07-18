@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Download, StarIcon } from "lucide-react"
+import { StarIcon } from "lucide-react"
 import Link from "next/link"
 export function Header(){
     return(

@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, Search, Sparkles, TrendingUp, University } from "lucide-react";
+import { GraduationCap, Search, Sparkles, TrendingUp } from "lucide-react";
 
 export function InfoCards(){
     return(
