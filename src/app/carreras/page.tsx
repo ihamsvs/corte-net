@@ -9,19 +9,18 @@ import { FilterFormClient } from "../components/FilterFormClient"; // Importa el
 const ITEMS_PER_PAGE = 12;
 
 interface CarrerasPageProps {
-  searchParams?: {
-    page?: string;
-    nombre?: string;
-    puntaje?: string;
-    universidad?: string;
-  };
+  searchParams?: Record<string, string | string[] | undefined>
+}
+
+function getParam(value: string | string[] | undefined): string {
+  return Array.isArray(value) ? value[0] : value || '';
 }
 
 export default async function CarrerasPage({ searchParams }: CarrerasPageProps) {
-  const currentPage = Number(searchParams?.page) || 1;
-  const filterNombre = searchParams?.nombre || '';
-  const filterPuntaje = searchParams?.puntaje || '';
-  const filterUniversidad = searchParams?.universidad || '';
+  const currentPage = Number(getParam(searchParams?.page)) || 1;
+  const filterNombre = getParam(searchParams?.nombre);
+  const filterPuntaje = getParam(searchParams?.puntaje);
+  const filterUniversidad = getParam(searchParams?.universidad);
 
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE - 1;
