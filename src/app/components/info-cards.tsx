@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Search, Sparkles, TrendingUp } from "lucide-react";
+import Link from "next/link";
 
 export function InfoCards(){
     return(
@@ -75,8 +76,8 @@ export function InfoCards(){
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a
-              href="#"
+            <Link
+              href="/carreras"
               className="flex items-center gap-4 p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-red-500/50 hover:bg-gray-800/80 transition-all duration-300 group/link"
             >
               <div className="p-3 bg-red-500/20 rounded-lg group-hover/link:bg-red-500/30 transition-colors">
@@ -86,10 +87,10 @@ export function InfoCards(){
                 <div className="font-semibold text-white mb-1">Buscar por Universidad</div>
                 <div className="text-gray-400 text-sm">Encuentra información específica</div>
               </div>
-            </a>
+            </Link>
 
-            <a
-              href="#"
+            <Link
+              href="/carreras"
               className="flex items-center gap-4 p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-orange-500/50 hover:bg-gray-800/80 transition-all duration-300 group/link"
             >
               <div className="p-3 bg-orange-500/20 rounded-lg group-hover/link:bg-orange-500/30 transition-colors">
@@ -99,7 +100,7 @@ export function InfoCards(){
                 <div className="font-semibold text-white mb-1">Explorar por Carrera</div>
                 <div className="text-gray-400 text-sm">Descubre opciones académicas</div>
               </div>
-            </a>
+            </Link>
           </div>
         </CardContent>
       </Card>
