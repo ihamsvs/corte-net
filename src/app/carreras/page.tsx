@@ -40,7 +40,7 @@ async function fetchCarreras({
 
   // Aplicar filtros condicionalmente
   if (filterNombre) {
-    query = query.ilike('nombre', `%${filterNombre}%`);
+    query = query.ilike('carrera', `%${filterNombre}%`);
   }
   if (filterPuntaje) {
     const puntajeNum = parseInt(filterPuntaje);
