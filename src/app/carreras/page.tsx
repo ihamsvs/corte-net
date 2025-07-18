@@ -36,7 +36,7 @@ async function fetchCarreras({
   filterPuntaje: string;
   filterUniversidad: string;
 }) {
-  let query = supabase.from('carreras').select('*', { count: 'exact' });
+  let query = supabase.from('carreras').select('*', { count: 'estimated' });
 
   // Aplicar filtros condicionalmente
   if (filterNombre) {
@@ -45,7 +45,7 @@ async function fetchCarreras({
   if (filterPuntaje) {
     const puntajeNum = parseInt(filterPuntaje);
     if (!isNaN(puntajeNum)) {
-      query = query.eq('puntaje', puntajeNum);
+      query = query.gte('puntaje', puntajeNum);
     }
   }
   if (filterUniversidad) {
